@@ -20,3 +20,5 @@ Menu d works with goals. Each goal has its title, description and completion lev
 Menu e accumulated points for all completed tasks and displays achieved level.
 
 Menu f shows help sections for each of the menus.
+
+The bot is running here: https://t.me/Goalachieverbot
