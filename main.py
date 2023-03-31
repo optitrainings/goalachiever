@@ -1,14 +1,17 @@
 import telebot
 import random
 import phrases
+import os
 
 from telebot import types
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 
-TOKEN = 'INSERT BOT TOKEN HERE'
+# insert bot token here
+TOKEN = '12345'
 bot = telebot.TeleBot(TOKEN)
 
+# uploading textx for info section
 info = eval(open(f'about\\info.txt', encoding='utf-8').read())
 aboutplan = eval(open(f'about\\aboutplan.txt', encoding='utf-8').read())
 aboutplan2 = eval(open(f'about\\aboutplan2.txt', encoding='utf-8').read())
@@ -685,6 +688,8 @@ info_menu = Menu(menu='About bot', markup=info_markup)
 @bot.message_handler(commands=['start'])
 def kickstart(message):
     u = message.chat.id
+    if not os.path.exists('users'):
+        os.makedirs('users')
     Menu.savedata(message, plan_menu.tag, '[]')
     Menu.savedata(message, fulfilled_menu.tag, '[]')
     Menu.savedata(message, list_menu.tag, '[]')
