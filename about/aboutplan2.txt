@@ -1,0 +1,1 @@
+f'<b>FOCUS regime</b> which you can on/off in Reminders settings - will send a message <i>every hour</i> depending on <b>Reminder timing</b> which you set to <b>encourage</b> you to focus on what you need to do now. It helps to get back if you got distracted.'
